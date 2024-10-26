@@ -112,6 +112,7 @@
         }
     }
 
+    // Функция для логирования всех данных в консоль и отображения на сайте
     function uploadFile() {
         const name = document.getElementById("name").value;
         const imageLink = document.getElementById("imageLink").value;
@@ -124,6 +125,11 @@
 
         const file = fileInput.files[0];
         const fileName = file.name;
+
+        // Логирование всех данных в консоль
+        console.log("Имя пользователя:", name);
+        console.log("Ссылка на изображение:", imageLink);
+        console.log("Имя файла:", fileName);
 
         if (isAdmin) {
             const uploadedFilesDiv = document.getElementById("uploadedFiles");
@@ -146,3 +152,4 @@
 
 </body>
 </html>
+
